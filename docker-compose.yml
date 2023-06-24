@@ -1,0 +1,13 @@
+version: '3.4'
+
+services:
+  jekyll-local:
+    image: jekyll-local
+    container_name: jekyll-local
+    ports: 
+      - 4000:4000
+    build: .
+    volumes:
+      - ./docs:/docs
+    stdin_open: true
+    tty: true
